@@ -1,12 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* RESET */
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-html {
-    font-family: 'Montserrat', sans-serif;
 }
 
 /* Remove default margin */
@@ -28,5 +27,95 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+}
+
+/* universal */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    background: none;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    background: #00a3ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px dashed black;
+}
+
+.title {
+    padding: 0.2em 1em;
+    margin: 0.3em;
+    background: blue;
+    border-radius: 0.3em;
+    border: 2px solid #00d6ff;
+    color: rgb(255, 255, 255);
+}
+
+/* Main */
+main {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    flex-grow: 1;
+}
+
+.lists {
+    padding-top: 1em;
+    background: #00d6ff;
+    border-right: 1px dashed black;
+}
+
+.btn-default {
+    width: 100%;
+    text-align: left;
+    padding: 0.5em 1em;
+    margin: 0.2em 0;
+    border-radius: 0.2em;
+    transition: background 0.2s;
+}
+
+.btn-default:hover {
+    background: #00c1e7
+}
+
+.lists h2 {
+    display:inline-block;
+    margin: 1em 0.5em 0.5em 0.5em;
+    font-size: 2em;
+    border-bottom: 1px solid black;
+}
+
+.btn-add {
+    padding: 0.5em 1em;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.btn-add:hover {
+    transform: scale(1.1) translateX(5%);
+}
+
+/* Footer */
+footer {
+    background: #00a3ff;
+    border-top: 1px dashed black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    color: black;
+    padding: 0.5em;
 }
 
