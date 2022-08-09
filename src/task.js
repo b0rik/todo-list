@@ -1,33 +1,30 @@
 export default class Task {
-    constructor(title, description = 'Add description', priority = 1, dueDate = null) {
+
+    constructor(title, listId, dueDate = null) {
         this.title = title;
-        this.description = description;
-        this.priority = priority;
         this.dueDate = dueDate;
+        this.listId = listId;
+        this.id =  Date.now().toString(36) + Math.random().toString(36).substring(2);
+    }
+
+    getId() {
+        return this.id;
     }
 
     getTitle() {
         return this.title;
     }
 
-    getDescription() {
-        return this.description;
-    }
-
-    getPriority() {
-        return this.priority;
-    }
-
     getDueDate() {
         return this.dueDate;
     }
 
-    setDescription(description) {
-        this.description = description;
+    getListId() {
+        return this.listId;
     }
 
-    setPriority(priority) {
-        this.priority = priority;
+    setTitle(title) {
+        this.title = title;
     }
 
     setDueDate(dueDate) {

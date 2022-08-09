@@ -201,7 +201,6 @@ function makeTask(task) {
     taskButton.appendChild(dateInput);
 
     taskButton.addEventListener('click', e => {
-
         const activeList = getActiveList();
         Storage.deleteTask(task);
 

@@ -50,7 +50,7 @@ button {
 
 /* Header */
 header {
-    background: #00a3ff;
+    background: #455d7a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,9 +60,9 @@ header {
 .title {
     padding: 0.2em 1em;
     margin: 0.3em;
-    background: blue;
+    background: #233142;
     border-radius: 0.3em;
-    border: 2px solid #00d6ff;
+    border: 2px solid #f95959;
     color: rgb(255, 255, 255);
     text-shadow:
 		-1px -1px 0 #000,
@@ -77,11 +77,12 @@ main {
     display: grid;
     grid-template-columns: 20% 80%;
     flex-grow: 1;
+
 }
 
 .lists {
     padding-top: 1em;
-    background: #00d6ff;
+    background: #f95959;
     border-right: 1px dashed black;
 }
 
@@ -101,10 +102,28 @@ main {
 		1px 1px 0 #000,
         2px 2px black;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.shrinkout {
+    transition: all 0.2s;
+    transform: scale(0);
 }
 
 .btn-default:hover {
-    background: #00c1e7
+    background: #973636;
+}
+
+.btn-default.active {
+    background: #e3e3e3;
+}
+
+.del {
+    display: none;
+    margin: 0;
+    padding: 0;
 }
 
 .lists h2 {
@@ -122,6 +141,7 @@ main {
 }
 
 .btn-add {
+    font-size: 1.2em;
     padding: 0.5em 1em;
     text-align: left;
     transition: transform 0.2s;
@@ -131,9 +151,77 @@ main {
     transform: scale(1.1) translateX(5%);
 }
 
+.user-lists {
+    display: flex;
+    flex-direction: column;
+}
+
+.tasks {
+    margin: 1em;
+    padding: 1em;
+}
+
+.add-popup {
+    display: flex;
+    flex-direction: column;
+    margin: 0.2em;
+    padding: 0.3em;
+    font-size: 1.2em;
+    background-color: #e3e3e3ad;
+    border-radius: 5px;
+    display: none;
+    border: 1px solid black;
+}
+
+.add-popup input {
+    font-size: 1em;
+    margin: 0.2em;
+
+}
+
+.input-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-btns button {
+    font-weight: 700;
+    color: #233142;
+    margin: 0.1em;
+    padding: 0.2em;
+    width: 50%;
+    background-color: #f95959;
+    border-radius: 2px;
+    border: 1px solid black;
+}
+
+.list-title {
+    font-size: 2em;
+}
+
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e0caca;
+    margin: 0.2em 0;
+    padding: 0.3em 1em;
+    border-radius: 5px;
+    font-size: 1.3em;
+    transition: transform 0.2s;
+}
+
+.task:hover {
+    transform: scale(1.05);
+}
+
 /* Footer */
 footer {
-    background: #00a3ff;
+    background: #455d7a;
     border-top: 1px dashed black;
     display: flex;
     justify-content: center;

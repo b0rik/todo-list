@@ -1,5 +1,9 @@
+import Task from "./task";
+
 export default class List {
+
     constructor(name) {
+        this.id = Date.now().toString(36) + Math.random().toString(36).substring(2);
         this.name = name;
         this.tasks = [];
     }
@@ -12,15 +16,23 @@ export default class List {
         return this.tasks;
     }
 
-    add(task){
-        this.tasks.push(task);
+    setTasks(tasks) {
+        this.tasks = tasks;
     }
 
-    remove(task){
-        const index = this.tasks.indexOf(task);
+    add(title){
+        this.tasks.push(new Task(title, this.id));
+    }
+
+    remove(taskId){
+        const index = this.tasks.findIndex(task => task.getId() === taskId);
 
         if(index > -1){
             this.tasks.splice(index, 1);
         }
+    }
+
+    getId() {
+        return this.id;
     }
 }

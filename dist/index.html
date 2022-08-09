@@ -15,20 +15,34 @@
     <main>
         <div class="lists">
             <div class="default-lists">
-                <button class="btn-default">Main</button>
-                <button class="btn-default">Today</button>
-                <button class="btn-default">This Week</button>
+                <button class="btn-default" id="main">Main</button>
+                <button class="btn-default" id="today">Today</button>
+                <button class="btn-default" id="week">This Week</button>
             </div>
 
             <h2>Lists:</h2>
             <div class="user-lists"></div>
             <button class="btn-add">Add list</button>
+            <div class="add-popup">
+                <input type="text" id="add-list">
+                <div class="input-btns">
+                    <button>Add</button>
+                    <button>Cancle</button>
+                </div>
+            </div>
 
         </div>
         <div class="tasks">
             <h3 class="list-title"></h3>
-            <div class="tasks"></div>
+            <div class="tasks-list"></div>
             <button class="btn-add">Add Task</button>
+            <div class="add-popup">
+                <input type="text" id="add-task">
+                <div class="input-btns">
+                    <button>Add</button>
+                    <button>Cancle</button>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
